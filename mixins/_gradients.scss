@@ -1,0 +1,50 @@
+.bg_noise {
+  width:100%; 
+  height:100%;
+  position:absolute;
+  left: 0;
+  top: 0;
+    background-image: url(https://assets-global.website-files.com/60773a26b10911709d89f04f/61ee5bc830646dc645e35164_download.png);
+    background-size: 250px;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    z-index: 99;
+    border-radius: 30em;
+    pointer-events: none;
+}
+
+.gradient-align {
+  width:0%; 
+  height:0%; 
+  position:absolute; 
+  left:50%; top:50%;
+
+  border-radius: 30em;
+  transition: 1s all ease;
+
+  &.active{
+    width:100%; 
+    height:100%; 
+    left:0; top:0;
+  }
+}
+
+.border-lg {border-radius: 50em;}
+
+.background-gradient {
+  position: relative;
+  display: flex;
+  height: 90vh;
+  padding-left: 140px;
+  padding-right: 140px;
+  @include bp-mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  margin: 0vh 0em;
+  transition: 0.5s all ease;
+
+  &.active {
+    margin: 5vh 1.5em;
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matin's Y3 Website</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/eye6prs.css">
+</head>
+<!-- end of head -->
+
+<body id="body">
+
+  <nav class="nav">
+    <a href="#" class="button-logo"><img src="images/icons/logo-black.png" alt="black plus logo"></a>
+    <a href="javascript:void(0)" class="button-menu" onclick="openNav()"><img src="images/icons/icon-menu-black.png" alt="black menu icon"></a>
+  </nav>
+  <!-- end of nav -->
+
+  <nav id="nav-overlay" class="nav-overlay">
+    <a href="#" class="button-logo"><img src="images/icons/logo-white.png" alt="white plus logo"></a>
+    <a href="javascript:void(0)" class="button-menu" onclick="closeNav()"><img src="images/icons/icon-menu-white.png" alt="white menu icon"></a>
+
+    <ul class="nav-overlay-content">
+      <li id="nav-link1" class="nav-link"><a href="repo/repo-home.html">Design Repository</a></li>
+      <li id="nav-link2" class="nav-link"><a href="cpj/cpj-home.html">Creative Process Journal</a></li>
+      <li id="nav-link3" class="nav-link"><a href="#">Catalogue of Making</a></li>
+      <li id="nav-link4" class="nav-link"><a href="#">Prototypes</a></li>
+    </ul>
+  
+    <div class="nav-overlay-background">
+      <div id="nav-bg0" class="border-lg gradient-align ranCol-0 active"></div>
+      <div id="nav-bg1" class="border-lg gradient-align repo-col"></div>
+      <div id="nav-bg2" class="border-lg gradient-align cpj-col"></div>
+      <div id="nav-bg3" class="border-lg gradient-align cat-col"></div>
+      <div id="nav-bg4" class="border-lg gradient-align proto-col"></div>
+    </div>
+    <div class="bg_noise"></div>
+    <div style="position: absolute;width: 100%;height: 100%;background-color: #021022;left: 0;top:0;z-index: -2;"></div>
+  </nav>
+<!-- end of nav overlay -->
+
+  <header class="header-container bg">
+    <div class="header-content">
+      <h1>Future <br>of Health <br><span> &</span> Tech</h1>
+      <p class="front">This site serves as the central space for all activities conducted by Abdul Matin during his final year of studies at Lasalle College of the Arts. The bulk of the information available revolves around his exploration within the healthcare sector in hopes of implementing a technological intervention as part of his Graduation Project in the Computation in Design Atelier, led by Andreas Schlegel.</p>
+      <img src="/images/homepage/stethoscope.svg" alt="stethoscope" class="mobile-images header-image-1 object" data-value="-2">
+      <img src="/images/homepage/thermo.svg" alt="thermo" class="mobile-images header-image-2 object" data-value="6">
+      <img src="/images/homepage/mask.svg" alt="mask" class="mobile-images header-image-3 object" data-value="4">
+      <img src="/images/homepage/glove.svg" alt="glove" class="mobile-images header-image-4 object" data-value="-6">
+      <img src="/images/icons/icon-scrolldown.png" alt="down arrow" class="header-image-5">
+    </div>
+  </header> 
+  <!-- end of header -->
+
+  <div class="background-gradient">
+    <div class="bg_noise"></div>
+    <div class="repo-col gradient-align"></div>
+    <section id="repo" class="homepage-section-container repo-bg">
+      <div class="homepage-section-content">
+        <h1>Design<br><span>Repository</span></h1>
+        <p>We are bound to face stress and anxiety when faced with illnesses. But when visiting hospitals, the negative emotions are heightened due to being unsure of what’s to come. It doesn’t help that the environment we’re forced to wait in is often sterile, increasing our emotional unrest. How can we as designers promote a space of healing when hospitals are limited to their current structures, daily regiments and limited budgets?</p>
+        <img src="/images/homepage/section-repo-image-1.png" alt="two floating cards" class="mobile-images homepage-section-repo-image-1">
+        <img src="/images/homepage/section-repo-image-2.png" alt="floating card" class="mobile-images homepage-section-repo-image-2">
+        <a href="repo/repo-home.html" class="button">Read More</a>
+      </div>
+    </section>
+  </div>
+    <!-- end of repo -->
+
+  <div class="background-gradient">
+    <div class="bg_noise"></div>
+    <div class="cpj-col gradient-align"></div>
+    <section id="cpj" class="homepage-section-container cpj-bg">
+      <div class="homepage-section-content">
+        <h1>Creative <br><span>Process</span><br>Journal</h1>
+        <p>In this segment, I key in notable advancements during my course of study. These may include insights from readings, consultations, workshops and more. Weekly entries reveal my process of thinking as I further develop my ideas to final fruition.
+        </p>
+        <img src="/images/homepage/section-cpj-image-1.png" alt="floating postit" class="mobile-images homepage-section-cpj-image-1">
+        <img src="/images/homepage/section-cpj-image-2.png" alt="two floating postits" class="mobile-images homepage-section-cpj-image-2">
+        <a href="cpj/cpj-home.html" class="button">Read More</a>
+      </div>
+    </section>
+  </div>
+    <!-- end of cpj -->
+
+    <div class="background-gradient">
+      <div class="bg_noise"></div>
+      <div class="cat-col gradient-align"></div>
+      <section id="cat" class="homepage-section-container cat-bg">
+        <div class="homepage-section-content">
+          <h1>Catalogue <br> of <span>Making</span></h1>
+          <p>Making is my form of research, a design-led approach to finding out how to make things work and more. This gallery reveals the slew of experiments in both physical making and in tech to test their capabilities in hopes of combining the learnings into the prototyping phase later down the road.
+          </p>
+          <img src="/images/homepage/section-cat-image-1.png" alt="Arduino parts" class="mobile-images homepage-section-cat-image-1">
+          <a href="#" class="button">Read More</a>
+        </div>
+      </section>
+    </div>
+      <!-- end of cat -->
+
+      <div class="background-gradient">
+        <div class="bg_noise"></div>
+        <div class="proto-col gradient-align"></div>
+        <section id="proto" class="homepage-section-container proto-bg">
+          <div class="homepage-section-content homepage-section-proto">
+            <h1>Prototype</h1>
+            <p>Purpose-led design iterations fill this portion with the intention of crafting high-fidelity objects of interaction. The prototype phase involves both making and feeback gathering.
+            </p>
+            <a href="#" class="button center">Read More</a>
+          </div>
+        </section>
+      </div>
+        <!-- end of proto -->
+
+    <footer class="footer bg">
+      <div class="footer-name">Future of Health & Tech</div>
+      <div class="footer-content col1">
+        Abdul Matin (23116) <br>
+        BA (Hons) Design Communication 2021-23<br>
+        <a class="repo-bg-col" href="#">abdulmatin.sapie@mylasalle.edu.sg</a>
+      </div>
+      <div class="footer-content col2">
+        <a class="cpj-bg-col" href="http://www.instagram.com/dusake">Instagram</a>
+        <a class="cat-bg-col" href="http://www.dusake.com">Dusake.com</a>
+        <a class="proto-bg-col"  href="#">Personal Email</a>
+      </div>
+      <div class="footer-content col3">This site serves as an online documentation of all works done throughout the final year of the design bachelor programme at Lasalle College of the Arts, Singapore.</div>
+    </footer>
+    <!-- end of footer -->
+
+<script src="main.js"></script>
+</body>
+</html>

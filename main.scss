@@ -1,0 +1,222 @@
+@import 'mixins/mixins'; 
+
+$bgCol: #EAE4D8;
+$repoCol: #CCFF00;
+$cpjCol: #FF005C;
+$catCol: #0066FF;
+$protoCol: #33FF00;
+
+$contentBlue: #1a416e;
+$contentlightBlue: #00b9c6;
+$contentWhite: #f7f2d4;
+
+$contentGreen: #00de59;
+$contentYellow: #ffef5c;
+$contentOrange: #ff7a00;
+
+$contentlightYellow: #fff4cc;
+$contentlightOrange: #ffb450;
+
+$contentlightBlue2: #1cf0ff;
+$contentPurple: #9379fc; 
+$contentOrange2: #fcc479;
+
+// reset //
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// base //
+@import 'mixins/base';
+@import 'mixins/gradients';
+
+// nav //
+@import 'mixins/nav';
+
+// header //
+@import 'mixins/header';
+
+// homepage sections //
+@import 'mixins/homepageSections';
+
+// section homes //
+@import 'mixins/sectionHomes';
+
+// section article //
+.article {
+  padding: 0em 8.75em;
+  @include bp-mobile {padding: 0px 2em;}
+}
+
+.content {
+  &-header {
+    height: 100vh;
+    display: flex;
+  }
+
+  &-title {
+    margin: auto;
+    font-size: 6rem;
+    inline-size: 60vw;
+    text-align: center;
+    line-height: 1;
+    mix-blend-mode: overlay;
+    @include bp-mobile {
+      inline-size: 90vw;
+      font-size: 3rem;}
+  }
+}
+
+.intro {
+  // height: 100vh;
+  display: flex;
+  padding: 2em 0em;
+}
+
+.col-6 {
+    display: grid;
+    margin: auto;
+    grid-column-gap: 3.2em;
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 4em;
+
+    @include bp-mobile {
+      grid-template-columns: 1fr;
+      grid-row-gap: 2em;
+    }
+}
+
+.big {
+  font-size: 3.1rem;
+  line-height: 1;
+  @include bp-mobile {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.regular {
+font-size: 1.3rem;
+line-height: 1.3;
+padding-top: 0.5em;
+}
+
+.content {
+  // width: 40vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 2em 12em;
+  @include bp-mobile {
+    padding: 2em 0em;
+  }
+}
+
+.mainPoint {
+  font-size:5em;
+  line-height: 1;
+  text-align: center;
+  padding-bottom: 0.5em;
+  @include bp-mobile {
+    font-size: 2em;
+  }
+}
+
+.subPoint {
+  padding-top: 0.5em;
+  font-size:2em;
+  line-height: 1.5;
+  @include bp-mobile {
+    font-size: 1.5em;
+  }
+}
+
+.image-12 {
+  display: flex;
+  padding: 2em 0em;
+  img {margin: auto; border-radius: 10em;}
+}
+
+.quoteBlock{
+  width: 60vw;
+  display: flex;
+  padding: 2em 0em;
+  flex-direction: column;
+  @include bp-mobile{
+    width: auto;
+  }
+}
+
+.quote {
+  font-size:2.2em;
+  line-height: 1;
+  margin-top: auto;
+  padding-bottom: 0.5em;
+  @include bp-mobile {
+    font-size: 1.5em;
+  }
+  // margin-bottom: auto;
+
+  &-name {
+    font-weight: 200;
+    margin-bottom: auto;
+  }
+}
+
+// section colours, gradients and background image//
+#repo {color: $repoCol;}
+#cpj {color: $cpjCol;}
+#cat {color: $catCol;}
+#proto {color: $protoCol;}
+
+.repo {
+  color: $repoCol;
+  & a {color: $repoCol;}
+  &-col {@include radialGradient($repoCol, transparent);}
+  &-bg {background-image: url(images/homepage/section-repo-bg.jpg); background-position: center;
+  &-1 {background-image: url(images/sections/repo/repo-home/repo-home-image-1.jpg); background-position: center;}
+  &-2 {background-image: url(images/sections/repo/repo-home/repo-home-image-2.jpg); background-position: center;}
+  &-3 {background-image: url(images/sections/repo/repo-home/repo-home-image-3.jpg); background-position: 80%;}
+  }
+  &-nav:hover {@include radialGradient($repoCol, transparent);}
+  &-bg-col:hover {background-color: $repoCol;}
+}
+
+.cpj {
+  color: $cpjCol;
+  & a {color: $cpjCol;}
+  &-col {@include radialGradient($cpjCol, transparent);}
+  &-bg {background-image: url(images/homepage/section-cpj-bg.jpg); background-position: center;}
+  &-nav:hover {@include radialGradient($cpjCol, transparent);}
+  &-bg-col:hover {background-color: $cpjCol;}
+}
+
+.cat {
+  color: $catCol;
+  &-col {@include radialGradient($catCol, transparent);}
+  &-bg {background-image: url(images/homepage/section-cat-bg.jpg); background-position: center;}
+  &-nav:hover {@include radialGradient($catCol, transparent);}
+  &-bg-col:hover {background-color: $catCol;}
+}
+
+.proto {
+  color: $protoCol;
+  &-col {@include radialGradient($protoCol, transparent);}
+  &-bg {background-image: url(images/homepage/section-proto-bg.jpg); background-position: top;}
+  &-nav:hover {@include radialGradient($protoCol, transparent);}
+  &-bg-col:hover {background-color: $protoCol;}
+}
+
+.ranCol {
+  &-0 {@include linearGradient($contentBlue, $contentlightBlue, $contentWhite);}
+  &-1 {@include linearGradient($contentGreen, $contentYellow, $contentOrange);}
+  &-2 {@include linearGradient($contentlightYellow, $contentlightOrange, $contentlightBlue);}
+  &-3 {@include linearGradient($contentlightBlue2, $contentPurple, $contentOrange2);}
+}
+
+// footer //
+@import 'mixins/footer';

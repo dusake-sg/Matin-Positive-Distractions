@@ -1,0 +1,32 @@
+@mixin linearGradient ($fromColor, $midColor, $toColor) {
+  background: $fromColor;
+  background:   -moz-linear-gradient(135deg,$fromColor 0%, $midColor 50%, $toColor 100%);
+  background: -webkit-linear-gradient(135deg,$fromColor 0%, $midColor 50%, $toColor 100%);
+  background:         linear-gradient(135deg,$fromColor 0%, $midColor 50%, $toColor 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00de59",endColorstr="#ff7a00",GradientType=1);
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+}
+
+@mixin radialGradient ($fromColor, $toColor) {
+  background: $toColor;
+  background: -webkit-radial-gradient(circle, $fromColor, $toColor), url(https://grainy-gradients.vercel.app/noise.svg); 
+  background:        -moz-radial-gradient(circle, $fromColor, $toColor), url(https://grainy-gradients.vercel.app/noise.svg);
+  background:             radial-gradient(circle, $fromColor, $toColor), url(https://grainy-gradients.vercel.app/noise.svg);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$fromColor}",endColorstr="#{$toColor}",GradientType=1);
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+}
+
+/* Media Query Mixins */
+@mixin bp-mobile {
+	@media only screen and (max-width: 560px) {
+		@content;
+	}
+}
+
+@mixin bp-desktop {
+	@media only screen and (min-width: 1600px) {
+		@content;
+	}
+}

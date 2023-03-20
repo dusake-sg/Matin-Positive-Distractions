@@ -1,0 +1,53 @@
+.footer {
+  padding: 2.6rem;
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 1fr);
+  grid-template-areas: 
+  "name links2 text"
+  "links1 links2 text";
+  column-gap: 1rem;
+
+  @include bp-mobile {
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 0.5fr);
+    grid-template-areas: 
+    "name" 
+    "links1"
+    "links2"
+    "text";
+  }
+ 
+  a {
+    color: #000;
+    transition: 1s all ease ;
+    border-radius: 2em;
+    
+    &:hover {
+      padding: 0.5em 1em;
+    }
+  }
+
+  &-name {
+    font-size: 150%;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    grid-area: name;
+  }
+
+  &-content{
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      line-height: 2;
+    }
+  }
+
+  .col {
+    &1{grid-area: links1; justify-self: start; @include bp-mobile{justify-self: auto;}}
+    &2{grid-area: links2; align-self: start; justify-self: start; @include bp-mobile{justify-self: auto;}}
+    &3{grid-area: text; align-self: start;}
+  }
+}

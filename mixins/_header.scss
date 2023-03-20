@@ -1,0 +1,44 @@
+.header {
+  &-container {
+    padding-left: 140px;
+    padding-right: 140px;
+    @include bp-mobile {
+      padding-left: 10px;
+      padding-right: 10px;}
+    height: 100vh;
+    width: auto;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &-content {
+    margin: auto;
+    max-width: 760px;
+    @include bp-desktop {max-width: 66vw;}
+    @include bp-mobile {max-width: 90vw;}
+    text-align: center;
+    
+    h1 {
+      font-size: 8rem;
+      line-height: .8;
+      padding-bottom: 20px;
+      text-transform: uppercase;
+      @include bp-mobile {
+        font-size: 400%;
+      }
+    }
+    
+    img {position: absolute}
+  }
+
+  &-image-1 {top: -20vh;left: 10vw;}
+  &-image-2 {top: -5vh; right: 5vw;}
+  &-image-3 {bottom: 10vh; right: -5vw;}
+  &-image-4 {bottom: -10vh; left: -10vw;}
+  &-image-5 {bottom: 30px; right: 50; transform: translate(-50%, 0);}
+}
+
+.mobile-images {@include bp-desktop {width: 20%;} @include bp-mobile {width: 40%;}}
+
+.front {z-index: 2;}

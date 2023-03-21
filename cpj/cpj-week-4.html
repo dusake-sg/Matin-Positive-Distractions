@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPJ: Week 4</title>
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/eye6prs.css" />
+  </head>
+  <body id="body">
+    <nav class="nav">
+      <a href="../index.html" class="button-logo"
+        ><img src="../images/icons/logo-black.png" alt="black plus logo"
+      /></a>
+      <a href="javascript:void(0)" class="button-menu" onclick="openNav()"
+        ><img src="../images/icons/icon-menu-black.png" alt="black menu icon"
+      /></a>
+    </nav>
+    <!-- end of nav -->
+
+    <nav id="nav-overlay" class="nav-overlay">
+      <a href="../index.html" class="button-logo"
+        ><img src="../images/icons/logo-white.png" alt="white plus logo"
+      /></a>
+      <a href="javascript:void(0)" class="button-menu" onclick="closeNav()"
+        ><img src="../images/icons/icon-menu-white.png" alt="white menu icon"
+      /></a>
+
+      <ul class="nav-overlay-content">
+        <li id="nav-link1" class="nav-link">
+          <a href="../repo/repo-home.html">Design Repository</a>
+        </li>
+        <li id="nav-link2" class="nav-link">
+          <a href="../cpj/cpj-home.html">Creative Process Journal</a>
+        </li>
+        <li id="nav-link3" class="nav-link">
+          <a href="../cat/cat-home.html">Catalogue of Making</a>
+        </li>
+        <li id="nav-link4" class="nav-link"><a href="../proto/proto-home.html">Prototypes</a></li>
+      </ul>
+
+      <div class="nav-overlay-background">
+        <div
+          id="nav-bg0"
+          class="border-lg gradient-align ranCol-0 active"
+        ></div>
+        <div id="nav-bg1" class="border-lg gradient-align repo-col"></div>
+        <div id="nav-bg2" class="border-lg gradient-align cpj-col"></div>
+        <div id="nav-bg3" class="border-lg gradient-align cat-col"></div>
+        <div id="nav-bg4" class="border-lg gradient-align proto-col"></div>
+      </div>
+      <div class="bg_noise"></div>
+      <div
+        style="
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #021022;
+          left: 0;
+          top: 0;
+          z-index: -2;
+        "
+      ></div>
+    </nav>
+    <!-- end of nav overlay -->
+
+    <article class="article">
+      <header class="content-header">
+        <div class="bg_noise"></div>
+        <div class="gradient-align ranCol-1 active" style="z-index: -99"></div>
+        <h1 class="content-title"><span>Early</span> Experiments <span>with</span> Tech</h1>
+      </header>
+      <!-- end of header -->
+
+      <section class="intro">
+        <div class="col-6">
+          <p class="big">
+            <span>Getting Ideas by Experimenting</span>
+          </p>
+          <p class="regular">
+            There's not a whole lot I know about physical computation and as Andreas has iterated multiple times, the best way to learn is by doing.
+            <br><br>
+            So let's get building.
+          </p>
+        </div>
+      </section>
+      <!-- end of intro -->
+
+<div class="content">
+<p class="mainPoint">Dall.E</p>
+        <p class="regular">
+          Ying Jia was curious to see what fruit stickers would be like to an AI and asked if I knew any good links. Since I was already on the site, I decided to search “digital tech wayfinding in hospital”.
+        </p>
+        <img class=image-12 src="../images/sections/cpj/week-4/image-1.jpg" alt="Screenshot of craiyon, showing 9 ai generated iamges of tech wayfinding in hospitals">
+        <p class="regular">
+          I wasn’t too impressed with what I saw because they simply seemed to imply digital displays and an over-emphasis on the colour blue. But it does inform me of the typical trends around the designs of hospital spaces, what's expected and comfortable.
+        </p>
+      </div>
+
+      <p class="content">
+        <p class="mainPoint">Symbols</p>
+        <p class="subPoint">Arduino, LED Panels</p>
+      </p>
+      <div class="col-6">
+        <img src="../images/sections/cpj/week-4/image-2.jpg" alt="Arduino LED panels connected and switched on">
+        <img src="../images/sections/cpj/week-4/image-3.jpg" alt="Setup of Arduino LED with code to panels to create movign set of arrows">
+        <p class="regular">
+          Top left: Turning on the LED Panels using online instructions. <br><br>
+          Top right: Setup from code to panels to create a moving set of arrows.
+          <br><br>
+          Right: Overhead version of electronics setup.
+          <br><br>
+          Bottom: Gif of moving arrows in a simulated corridor.
+        </p>
+        <img src="../images/sections/cpj/week-4/image-4.jpg" alt="Setup of Arduino LED with code to panels to create movign set of arrows">
+        <img src="../images/sections/cpj/week-4/image-5.gif" alt="Setup of Arduino LED with code to panels to create movign set of arrows">
+        <p class="regular">
+          The experiments above helped me discover the Arduino system. I learned that the coding language was similar enough to Javascript that I roughly understood what parameters to play with to create the animated arrows (seen in the images above).
+        </p>
+      </div>
+
+      <p class="content">
+      <p class="subPoint">Feedback</p>
+      </p>
+      <div class="col-6">
+        <img src="../images/sections/cpj/week-4/image-6.jpg" alt="post it">
+        <p class="regular">
+          <b>Aimee</b> <br>
+          I think both options would work depending on their placement (e.g. Opt B would work if it's placed on the ground to guide people’s path) <br><br>
+          In a hospital setting, I would assume that there are a lot of sectors and it might be confusing to navigate through without a proper system.<br><br>
+          I think it's a great exploration of methods of wayfinding that isn’t obstructed by barriers such as languages<br><br>
+          Explore more about their effectiveness when they are placed in different locations (e.g. on the ground, at eye level, embedded on the floor, etc)
+        </p>
+        <p class="regular">
+          <b>Rachel</b> <br>
+          Will it be switched on during the day as well? If so, will the light be different / move differently?
+          Should the speed of the light follow the walking pace of the individual? <br><br>
+          If it's too fast, the person might feel rushed <br><br>
+          Too slow they might not notice the light following them at all. <br><br>
+          What if many people walked past? How many dot lights would there be? Would it be chaotic or organised in a pattern?<br><br>
+          People doing Lasik, would they be affected?
+        </p>
+        <img src="../images/sections/cpj/week-4/image-7.jpg" alt="">
+        <p class="regular">
+          <b>Sanghee/Seoyoen</b> <br>
+          How people can find their way without specific symbols? <br><br>
+          Maybe a new form of interactive visuals might be needed?<br><br>
+          Option B looks like there's more potential to be developed as another way of wayfinding
+        </p>
+        <p class="regular">
+          <b>Aditi</b> <br>
+          Servo motors wall <br><br>
+          Subtle, less invasive <br><br>
+          Check out Daniel Rozin <br><br>
+          Create ‘mirrors’ or representation <br><br>
+          Multiple repetitions of a simple prototype
+        </p>
+        <img src="../images/sections/cpj/week-4/image-8.jpg" alt="">
+        <p class="regular">
+          <b>Ariel</b> <br>
+          Opt A arrows are clear<br><br>
+          For both options, a person who has vision problems won’t be able to use it.<br><br>
+          Include braille or sound.<br><br>
+          Opt B direction might not be enough with just light<br><br>
+          Braille floors with lights.
+        </p>
+        <p class="regular">
+          <b>Ellie</b> <br>
+          How it brings me to the correct direction/places <br><br>
+          What is the input? (Where to press to show me the direction)<br><br>
+          Ideas: maybe a compass that shows the direction in the hospital.<br><br>
+          What colour represents the correct direction?
+        </p>
+        <img src="../images/sections/cpj/week-4/image-9.jpg" alt="post it">
+        <p class="regular">
+          <b>Farhan</b> <br>
+          Now that I see the experiment, I realise how bright the LED signage was. However, I feel that it might be too bright for some users to get to a certain place. Taking into consideration that their end goal is just to reach their destination. <br><br>
+          I feel that this wayfinding might work better in places like Gri.d or somerset.
+        </p>
+        <p class="regular">
+          <b>Sadhna</b> <br>
+          The comparison between the 2 different symbols used depicts different visual emotions for people like how Rachel mentions “it looks scary for the dotted light to be seen at night!” <br><br>
+Would this visual representation take away the seriousness of a hospital?<br><br>
+Would older people complain about eye sensitivity to light?<br><br>
+Different colours for different clinics/wards; have a legend for the colours. (Follow the light)
+
+        </p>
+      </div>
+      
+    </section>
+    </article>
+    <!-- end of article -->
+
+    <div class="button-article">
+      <a class="mirror" href="../cpj/cpj-week-2.html"
+        ><img src="../images/icons/icon-right.png" alt="previous article"
+      /></a>
+      <a href="cpj-home.html"
+        ><img src="../images/icons/icon-menu-black.png" alt="all article"
+      /></a>
+      <a href="../cpj/cpj-week-4"
+        ><img src="../images/icons/icon-right.png" alt="next article"
+      /></a>
+    </div>
+    <!-- end of article buttons -->
+
+    <footer class="footer bg">
+      <div class="footer-name">Future of Health & Tech</div>
+      <div class="footer-content col1">
+        Abdul Matin (23116) <br />
+        BA (Hons) Design Communication 2021-23<br />
+        <a class="repo-bg-col" href="#">abdulmatin.sapie@mylasalle.edu.sg</a>
+      </div>
+      <div class="footer-content col2">
+        <a class="cpj-bg-col" href="http://www.instagram.com/dusake"
+          >Instagram</a
+        >
+        <a class="cat-bg-col" href="http://www.dusake.com">Dusake.com</a>
+        <a class="proto-bg-col" href="#">Personal Email</a>
+      </div>
+      <div class="footer-content col3">
+        This site serves as an online documentation of all works done throughout
+        the final year of the design bachelor programme at Lasalle College of
+        the Arts, Singapore.
+      </div>
+    </footer>
+    <!-- end of footer -->
+
+    <script src="../main.js"></script>
+  </body>
+</html>

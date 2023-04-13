@@ -48,13 +48,13 @@ document.getElementById("nav-link4").addEventListener("mouseover", mouseOver4);
 document.getElementById("nav-link4").addEventListener("mouseout", mouseOut4);
 
 
-function mouseOver1() {document.getElementById("nav-bg1").classList.add("active");}
-function mouseOut1() {document.getElementById("nav-bg1").classList.remove("active");}
-function mouseOver2() {document.getElementById("nav-bg2").classList.add("active");}
-function mouseOut2() {document.getElementById("nav-bg2").classList.remove("active");}
-function mouseOver3() {document.getElementById("nav-bg3").classList.add("active");}
-function mouseOut3() {document.getElementById("nav-bg3").classList.remove("active");}
-function mouseOver4() {document.getElementById("nav-bg4").classList.add("active");}
-function mouseOut4() {document.getElementById("nav-bg4").classList.remove("active");}
+function mouseOver1() {document.getElementById("nav-bg1").classList.add("active"); document.getElementById("nav-bg0").classList.remove("active"); }
+function mouseOut1() {document.getElementById("nav-bg1").classList.remove("active"); document.getElementById("nav-bg0").classList.add("active");}
+function mouseOver2() {document.getElementById("nav-bg2").classList.add("active");document.getElementById("nav-bg0").classList.remove("active");}
+function mouseOut2() {document.getElementById("nav-bg2").classList.remove("active"); document.getElementById("nav-bg0").classList.add("active");}
+function mouseOver3() {document.getElementById("nav-bg3").classList.add("active"); document.getElementById("nav-bg0").classList.remove("active");}
+function mouseOut3() {document.getElementById("nav-bg3").classList.remove("active"); document.getElementById("nav-bg0").classList.add("active");}
+function mouseOver4() {document.getElementById("nav-bg4").classList.add("active"); document.getElementById("nav-bg0").classList.remove("active");}
+function mouseOut4() {document.getElementById("nav-bg4").classList.remove("active"); document.getElementById("nav-bg0").classList.add("active");}
 
 // mouseover

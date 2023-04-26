@@ -224,7 +224,10 @@ padding-top: 0.5em;
   color: $cpjCol;
   & a {color: $cpjCol;}
   &-col {@include radialGradient($cpjCol, transparent);}
-  &-bg {background-image: url(images/homepage/section-cpj-bg.jpg); background-position: center;}
+  &-bg {background-image: url(images/homepage/section-cpj-bg.jpg); background-position: center;
+    &-2-11 {background-image: url(images/sections/cpj/sem-2/week-11/thumbnail.jpg); background-position: center;}
+  }
+
   &-nav:hover {@include radialGradient($cpjCol, transparent);}
   &-bg-col:hover {background-color: $cpjCol;}
 }

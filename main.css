@@ -727,6 +727,10 @@ span {
   background-image: url(images/homepage/section-cpj-bg.jpg);
   background-position: center;
 }
+.cpj-bg-2-11 {
+  background-image: url(images/sections/cpj/sem-2/week-11/thumbnail.jpg);
+  background-position: center;
+}
 .cpj-nav:hover {
   background: transparent;
   background: -webkit-radial-gradient(circle, #FF005C, transparent), url(https://grainy-gradients.vercel.app/noise.svg);

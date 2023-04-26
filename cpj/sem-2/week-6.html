@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sem 2, Week 6</title>
+  <link rel="stylesheet" href="../../main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/eye6prs.css">
+</head>
+<body id="body">
+
+  <nav class="nav">
+    <a href="../../index.html" class="button-logo"><img src="../../images/icons/logo-black.png" alt="black plus logo"></a>
+    <a href="javascript:void(0)" class="button-menu" onclick="openNav()"><img src="../../images/icons/icon-menu-black.png" alt="black menu icon"></a>
+  </nav>
+  <!-- end of nav -->
+
+  <nav id="nav-overlay" class="nav-overlay">
+    <a href="../../index.html" class="button-logo"><img src="../../images/icons/logo-white.png" alt="white plus logo"></a>
+    <a href="javascript:void(0)" class="button-menu" onclick="closeNav()"><img src="../../images/icons/icon-menu-white.png" alt="white menu icon"></a>
+
+    <ul class="nav-overlay-content">
+      <li id="nav-link1" class="nav-link"><a href="../../repo/repo-home.html">Design Repository</a></li>
+      <li id="nav-link2" class="nav-link"><a href="../../cpj/cpj-home.html">Creative Process Journal</a></li>
+      <li id="nav-link3" class="nav-link"><a href="../../cat/cat-home.html">Catalogue of Making</a></li>
+      <li id="nav-link4" class="nav-link"><a href="../../proto/proto-home.html">Prototypes</a></li>
+    </ul>
+  
+    <div class="nav-overlay-background">
+      <div id="nav-bg0" class="border-lg gradient-align-menu ranCol-0 active"></div>
+      <div id="nav-bg1" class="border-lg gradient-align-menu repo-col"></div>
+      <div id="nav-bg2" class="border-lg gradient-align-menu cpj-col"></div>
+      <div id="nav-bg3" class="border-lg gradient-align-menu cat-col"></div>
+      <div id="nav-bg4" class="border-lg gradient-align-menu proto-col"></div>
+    </div>
+    <div class="bg_noise"></div>
+    <div style="position: absolute;width: 100%;height: 100%;background-color: #021022;left: 0;top:0;z-index: -2;"></div>
+  </nav>
+<!-- end of nav overlay -->
+
+<article class="article">
+  <header class="content-header">
+    <div class="bg_noise"></div>
+    <div class="gradient-align ranCol-3 active" style="z-index: -99;"></div>
+    <h1 class="content-title">
+      Weeks 6: <span>Interactive Prototyping & Testing</span>
+    </h1>
+  </header>
+  <!-- end of header -->
+
+  <section class="intro">
+    <div class="col-6">
+      <p class="big"><span>
+        Completing the Dissertation
+        </span></p>
+      <p class="regular">
+        This week's all about completing the final bits of prototyping and user testing to be included as the conclusion to the Dissertation.
+        </p>
+      </div>
+  </section>
+  <!-- end of intro -->
+
+  <section class="content-wide">
+    <div class="col-6">
+      <h1 class="subPoint">
+        Converting JavaScript to p5 (cont.)
+      </h1>
+      <p class="regular">
+        Found a cool documentation of connecting the ml5 hand pose feature to servo motors, link <a href="https://makeabilitylab.github.io/physcomp/communication/handpose-serial.html#handpose-model">here</a>. Might be useful in figuring out how to connect to arduino later on.
+      </p>
+    </div>
+  </section>
+  
+  <img src="../../images/sections/cpj/sem-2/week-6/image-1.jpg" alt="">
+  <p class="regular">
+    Found a video tutorial of using face api on p5js, link <a href="https://www.youtube.com/watch?v=3yqANLRWGLo&ab_channel=KazukiUmeda">here</a>.
+  </p>
+  <!-- end of section 1 -->
+
+  <section class="content">
+    <h2 class="subPoint">Issue</h2>
+    <p class="regular">
+      Issue of detecting value of expressions when no faces are detected. Prior to extracting the data value of an expression, the face api works despite having no faces on screen. However, once the data extraction code is in, the face api will initially work but then stop indefinitely when no faces are found.
+<br><br>
+      Found a fix via fallback value, link <a href="https://codingbeautydev.com/blog/javascript-cannot-read-property-of-undefined/#:~:text=The%20%E2%80%9Ccannot%20read%20property%20of%20undefined%E2%80%9D%20error%20occurs%20when%20you,the%20variable%20before%20accessing%20it.">here</a>.
+      The reason behind why the code was crashing was because the value trying to be received became undefined when no faces were found. As such, creating a fallback value of 0 if no faces were found ensures that the code continues running.
+
+      <img src="../../images/sections/cpj/sem-2/week-6/image-2.jpg" alt="">
+      Highlighted: Old code without the optional chaining operator (?.) and nullish coalescing operator (??). 
+      <br><br>
+      <img src="../../images/sections/cpj/sem-2/week-6/image-3.jpg" alt="">
+      Now with all the values extractable, a simple if else statement can be made to write to the arduino. Currently, it reads all 3 emotions and will send the specific speed if any of the emotions bring up to a value of 0.8 and above. Current issues include the inconsistency of detecting sad faces, which might be an issue for detecting faces with glasses. Another issue is the serial writes are happening at every frame, hence making the speed changes very erratic. I need to figure out how to create a decay of time or delay between each read to write function. And if possible, ensure that the changes in speed are gradual rather than immediate.
+    </p>
+  </section>
+  <!-- end of section 2 -->
+
+  <section class="content-wide">
+    <h1 class="mainPoint">
+      Setting Up a Prototype Corner
+    </h1>
+    <p class="regular">
+      Aside from the code, this week is key in collecting the last bit of information needed for my dissertation. While I’m unable to figure out the code at the moment, I can still think about how I’d like to setup my user testing which includes the actual setup, the series of events to test, the types of observations I’m looking for and a set of questions to ask to be used as data for comparisons and conclusion building.
+    </p>
+    <div class="col-6" style="padding: 2em 0em">
+      <p class="regular">
+        Heartbeat sensor not working.
+      </p>
+      <img src="../../images/sections/cpj/sem-2/week-6/image-4.jpeg" alt="">
+
+      <p class="regular">
+        New heartbeat sensor works when placed on certain parts of finger tip and at a certain pressure (not hard, not soft).
+      </p>
+      <img src="../../images/sections/cpj/sem-2/week-6/image-4.jpeg" alt="">
+    </div>
+  </section>
+  <!-- end of section 3 -->
+
+  <section class="content-wide">
+    <div class="col-6">
+      <p class="regular">
+        <b>Technology and Racial Bias</b>
+        <br>
+        Although we continued the study with this model due to a lack of other available options, it is important to note that training models can be fed with their own library of images, not just those that have already been taught and are available online. 
+      </p>
+      <p class="regular">
+        Want to talk about racial bias but might stray too far from the main purpose of paper.
+      </p>
+
+      <p class="regular">
+        Another issue that arose from the group testing was the model’s ability to detect darker skin tones. Within the same room, subjects with darker skin tones had a lower rate of their face being detected in general, let alone their expressions. Despite the use of over 30,000 images and close to 400,00 faces, the level of variance only look at scale, angle and occlusion. This topic of study is expanded in studies on racial bias where learning models are put through images that do not include an extensive coverage of skin tones, instead defaulting to lighter toned individuals. 
+<br><br>
+        Figure X: Various criteria used to collate images for the WIDER FACE dataset, link here
+        Have a look at <a href="https://guides.library.unr.edu/mlacitation/chartsimages">https://guides.library.unr.edu/mlacitation/chartsimages</a> 
+        <br><br>
+        The limitations of the ml5 library leaves a lot to be desired in terms of inclusivity. Within the healthcare context especially, where individuals could be diverse in their physical health such as burn victims. (further content when access to this paper is received) Due to the limited alternatives available, we proceed with the current model as is. Further comments on how to improve this technology are covered later in the notes for further research. 
+      </p>
+      <p class="regular">
+        Although there are some papers that talk about the issues in relation to healthcare + tech.
+      </p>
+
+      <p class="regular">
+        May expand on effectiveness of positive distraction for specific end-user in mind when I finally decide on one
+<br><br>
+        (e.g. positive distraction for kids are effective when engaged in simple games or age-appropriate entertainment like clowns (Sparks; Vagnoli & Messeri).
+      </p>
+      <p class="regular">
+        Did not expand on end user in the end.
+      </p>
+
+      <p class="regular">
+        May expand on specific space for intervention when I finally decide on one.
+<br><br>
+        (e.g. waiting rooms, shared corridors, common rooms in specific wards, etc).
+      </p>
+      <p class="regular">
+        Did not expand on specificity.
+      </p>
+
+    </div>
+  </section>
+
+</article>
+<!-- end of article -->
+
+<div class="button-article">
+  <a class="mirror" href="../../cpj/sem-2/week-5.html"><img src="../../images/icons/icon-right.png" alt="previous article"></a>
+  <a href="../../cpj/sem-2-home.html"><img src="../../images/icons/icon-menu-black.png" alt="all article"></a>
+  <a href="../../cpj/sem-2/week-7-10.html"><img src="../../images/icons/icon-right.png" alt="next article"></a>
+</div>
+<!-- end of article buttons -->
+
+<footer class="footer bg">
+  <div class="footer-name">Future of Health & Tech</div>
+  <div class="footer-content col1">
+    Abdul Matin (23116) <br>
+    BA (Hons) Design Communication 2021-23<br>
+    <a class="repo-bg-col" href="#">abdulmatin.sapie@mylasalle.edu.sg</a>
+  </div>
+  <div class="footer-content col2">
+    <a class="cpj-bg-col" href="http://www.instagram.com/dusake">Instagram</a>
+    <a class="cat-bg-col" href="http://dusake.webflow.io">Dusake.com</a>
+    <a class="proto-bg-col"  href="#">Personal Email</a>
+  </div>
+  <div class="footer-content col3">This site serves as an online documentation of all works done throughout the final year of the design bachelor programme at Lasalle College of the Arts, Singapore.</div>
+</footer>
+<!-- end of footer -->
+
+<script src="../../main.js"></script>
+</body>
+</html>

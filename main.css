@@ -727,9 +727,25 @@ span {
   background-image: url(images/homepage/section-cpj-bg.jpg);
   background-position: center;
 }
+.cpj-bg-2-1 {
+  background-image: url(images/sections/cpj/sem-2/week-1/thumbnail.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.cpj-bg-2-2 {
+  background-image: url(images/sections/cpj/sem-2/week-2/thumbnail.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.cpj-bg-2-6 {
+  background-image: url(images/sections/cpj/sem-2/week-6/thumbnail.jpg);
+  background-position: center;
+  background-size: cover;
+}
 .cpj-bg-2-11 {
   background-image: url(images/sections/cpj/sem-2/week-11/thumbnail.jpg);
   background-position: center;
+  background-size: cover;
 }
 .cpj-nav:hover {
   background: transparent;

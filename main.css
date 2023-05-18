@@ -413,11 +413,11 @@ span {
   display: flex;
   flex-flow: row wrap;
   list-style-type: none;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: stretch;
   padding-top: 6.25em;
   padding-bottom: 2em;
-  row-gap: 1em;
+  gap: 1em;
 }
 @media only screen and (max-width: 720px) {
   .section-container {
@@ -428,7 +428,7 @@ span {
   border-radius: 2em;
   background-color: #000;
   transition: 0.5s;
-  width: 32%;
+  width: 31.6%;
   padding: 1.5em;
 }
 .section-content:hover {
@@ -438,6 +438,7 @@ span {
   .section-content {
     height: auto;
     margin-bottom: 0.5em;
+    width: 100%;
   }
 }
 .section-content h3 {
@@ -450,9 +451,6 @@ span {
   line-height: 0.8;
 }
 @media only screen and (max-width: 720px) {
-  .section-content {
-    width: auto;
-  }
   .section-content h3 {
     font-size: 1em;
   }
@@ -463,6 +461,17 @@ span {
 
 .height-90 {
   height: 95vh;
+}
+
+.width-66 {
+  width: 66%;
+  float: right;
+}
+@media only screen and (max-width: 720px) {
+  .width-66 {
+    width: auto;
+    float: none;
+  }
 }
 
 .scroll {

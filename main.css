@@ -629,6 +629,10 @@ span {
   border-radius: 10em;
 }
 
+.image-round img {
+  border-radius: 2em;
+}
+
 .quoteBlock {
   width: 60vw;
   display: flex;
